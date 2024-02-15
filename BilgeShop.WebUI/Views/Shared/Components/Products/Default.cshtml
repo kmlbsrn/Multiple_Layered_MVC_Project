@@ -1,0 +1,50 @@
+﻿@model List<ProductListViewModel>
+
+
+<div class="row">
+
+    @if (Model.Any())
+    {
+        <main class="main bd-grid">
+
+            @foreach (var product in Model)
+            {
+
+                <article class="card">
+                    <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
+
+                        <div class="card__img">
+
+                            @if (string.IsNullOrWhiteSpace(product.ImagePath))
+                            {
+                                <img src="~/images/xlargeicons_image_iconxlarge_5314.png" />
+                            }
+                            else
+                            {
+                                <img src="~/images/products/@product.ImagePath" alt="">
+
+                            }
+                        </div>
+                        <div class="card__name">
+                            <p>@product.Name</p>
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+
+                            <div>
+
+                                <span class="card__preci card__preci--now">@product.UnitPrice</span>
+                            </div>
+                            <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                        </div>
+                    </a>
+
+                </article>
+
+
+            }
+        </main>
+    }
+
+
+</div>

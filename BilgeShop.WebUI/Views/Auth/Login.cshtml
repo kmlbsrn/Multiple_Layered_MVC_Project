@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Yap</title>
+    <link href="~/styles/login.css" rel="stylesheet" />
+</head>
+
+
+
+@model LoginViewModel
+
+<body>
+
+    <div class="login-box" style="top:33%; margin-top:80px; width:28%">
+        <h2>Giriş Sayfası</h2>
+        <form method="post" asp-controller="Auth" asp-action="Login">
+
+            <div class="user-box">
+                <input asp-for="Email" type="email" required>
+                <label class="required" asp-for="Email"></label>
+
+
+            </div>
+            <div class="d-flex">
+                <div class="user-box me-4">
+                    <input asp-for="Password" type="password" required>
+                    <label class="required" asp-for="Password"></label>
+                </div>
+            </div>
+
+            <div class="text-warning" asp-validation-summary="All">
+            </div>
+
+            <button type="submit" class="float-end">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Giriş Yap
+            </button>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

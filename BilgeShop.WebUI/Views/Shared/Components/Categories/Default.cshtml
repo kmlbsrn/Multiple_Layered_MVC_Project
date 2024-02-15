@@ -1,0 +1,49 @@
+﻿@model List<CategoryViewModel>
+
+
+
+
+
+
+@* <div class="list-group mt-3">
+    <a asp-controller="" asp-action="" asp-route-categoryId="" asp-route-categoryName="" class="fw-bold list-group-item">Tüm Ürünler</a>
+
+
+    @foreach (var item in Model)
+    {
+        <a asp-controller="" asp-action="" asp-route-categoryId="@item.Id" asp-route-categoryName="@item.Name" class="list-group-item list-group-item-action">@item.Name</a>
+
+    }
+</div> *@
+
+
+<div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+        <a asp-controller="" asp-action="" asp-route-categoryId="" asp-route-categoryName="" class="nav-item nav-link link-body-emphasis text-white">Tüm Ürünler</a>
+        @foreach (var item in Model)
+        {
+            <a asp-controller="" asp-action="" asp-route-categoryId="@item.Id" asp-route-categoryName="@item.Name" class="nav-item nav-link link-body-emphasis text-white">@item.Name</a>
+
+        }
+        
+    </nav>
+
+</div>
+
+@* 
+<div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+        <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">U.S.</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
+    </nav>
+</div> *@
